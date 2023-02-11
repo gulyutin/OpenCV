@@ -3,7 +3,11 @@ import cv2
 face_cascade_db = cv2.CascadeClassifier(cv2.data.haarcascades+"haarcascade_frontalface_default.xml")
 eye_cascade_db = cv2.CascadeClassifier(cv2.data.haarcascades+"haarcascade_eye.xml")
 
-cap = cv2.VideoCapture(0)
+myrtmp_addr = "rtmp://ovsu.mycdn.me/input/4728756120437_3756447238773_iwly3g3icu"
+cap = cv2.VideoCapture(myrtmp_addr)
+
+
+# cap = cv2.VideoCapture(0)
 
 while True: 
     success, img = cap.read()
